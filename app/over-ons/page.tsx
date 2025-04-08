@@ -1,67 +1,115 @@
-import { ArrowRight } from "lucide-react"
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { TnLogo } from "@/components/tn-logo"
+"use client"
 
-export default function OverOns() {
+import { motion } from "framer-motion"
+import Image from "next/image"
+import { Card, CardContent } from "@/components/ui/card"
+
+export default function AboutUs() {
   return (
-    <div className="container py-12 md:py-16 lg:py-24">
-      <div className="mx-auto max-w-4xl space-y-12">
-        <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Over Toekomst Nederland</h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-            Leer meer over onze partij, onze visie en waar wij voor staan.
-          </p>
-        </div>
-
-        <div className="flex justify-center py-8">
-          <TnLogo className="h-40 w-40" />
-        </div>
-
-        <div className="space-y-8">
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Onze Naam</h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              De naam "Toekomst Nederland" (TN) weerspiegelt onze focus op de toekomst van ons land. Wij geloven dat
-              politiek niet alleen over het hier en nu moet gaan, maar vooral over het bouwen aan een betere toekomst
-              voor alle generaties.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Onze Visie</h2>
-            <p className="text-gray-500 dark:text-gray-400">
-              Toekomst Nederland staat voor een samenleving waarin iedereen kansen krijgt om zich te ontwikkelen en bij
-              te dragen. Wij geloven in een duurzame economie die werkt voor iedereen, in een sterke sociale basis, en
-              in het beschermen van onze planeet voor toekomstige generaties.
-            </p>
-            <p className="text-gray-500 dark:text-gray-400">
-              Onze politiek is gebaseerd op feiten, wetenschap en een langetermijnvisie. Wij zoeken naar pragmatische
-              oplossingen die werken voor alle Nederlanders, niet alleen voor bepaalde groepen.
-            </p>
-          </div>
-
-          <div className="space-y-4">
-            <h2 className="text-2xl font-bold">Onze Waarden</h2>
-            <ul className="space-y-2 text-gray-500 dark:text-gray-400 list-disc pl-5">
-              <li>Duurzaamheid - in economie, milieu en beleid</li>
-              <li>Inclusiviteit - een samenleving waar iedereen erbij hoort</li>
-              <li>Innovatie - vooruitgang door nieuwe ideeën en technologieën</li>
-              <li>Transparantie - open en eerlijk bestuur</li>
-              <li>Solidariteit - we zorgen voor elkaar</li>
-            </ul>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-emerald-500 py-20 text-white">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">Over Ons</h1>
+            <p className="text-xl">Maak kennis met Toekomst Nederland</p>
           </div>
         </div>
+      </section>
 
-        <div className="flex justify-center pt-8">
-          <Link href="/programma">
-            <Button className="bg-green-600 hover:bg-green-700">
-              Bekijk ons programma
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-          </Link>
+      {/* Main Content */}
+      <section className="py-20">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-16 grid gap-12 md:grid-cols-2 md:items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div className="relative h-80 w-full overflow-hidden rounded-2xl">
+                  <Image
+                    src="/placeholder.svg?height=600&width=800"
+                    alt="Toekomst Nederland Team"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, x: 30 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <h2 className="mb-4 text-3xl font-bold text-gray-900">Toekomst Nederland (TN)</h2>
+                <p className="mb-6 text-lg text-gray-700">
+                  Onze naam weerspiegelt onze focus: het bouwen aan een betere toekomst voor Nederland. We kijken
+                  vooruit, niet achteruit, en zoeken naar innovatieve oplossingen voor de uitdagingen van morgen.
+                </p>
+              </motion.div>
+            </div>
+
+            <motion.div
+              className="mb-16"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <Card className="overflow-hidden rounded-2xl border-none shadow-lg">
+                <CardContent className="p-8">
+                  <h2 className="mb-6 text-3xl font-bold text-gray-900">Onze Visie</h2>
+                  <p className="text-lg leading-relaxed text-gray-700">
+                    Wij geloven in een toekomstgericht Nederland waarin duurzaamheid, gelijke kansen en technologische
+                    vooruitgang centraal staan. Onze ideologie is progressief en sociaal-liberaal: we combineren
+                    individuele vrijheid met verantwoordelijkheid voor elkaar en het milieu.
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <h2 className="mb-6 text-3xl font-bold text-gray-900">Onze Kernwaarden</h2>
+              <div className="grid gap-6 md:grid-cols-3">
+                <Card className="border-none shadow-md">
+                  <CardContent className="p-6">
+                    <h3 className="mb-2 text-xl font-bold text-emerald-600">Innovatie</h3>
+                    <p className="text-gray-700">
+                      We omarmen technologische vooruitgang en zoeken naar creatieve oplossingen voor maatschappelijke
+                      uitdagingen.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-none shadow-md">
+                  <CardContent className="p-6">
+                    <h3 className="mb-2 text-xl font-bold text-blue-600">Duurzaamheid</h3>
+                    <p className="text-gray-700">
+                      We streven naar een economie en samenleving die in balans is met de natuur en toekomstige
+                      generaties.
+                    </p>
+                  </CardContent>
+                </Card>
+                <Card className="border-none shadow-md">
+                  <CardContent className="p-6">
+                    <h3 className="mb-2 text-xl font-bold text-purple-600">Gelijke Kansen</h3>
+                    <p className="text-gray-700">
+                      We geloven dat iedereen, ongeacht achtergrond, dezelfde mogelijkheden verdient om te slagen in het
+                      leven.
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </motion.div>
+          </div>
         </div>
-      </div>
+      </section>
     </div>
   )
 }

@@ -1,155 +1,111 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+"use client"
 
-export default function Programma() {
+import { motion } from "framer-motion"
+import { TrendingUp, Shield, GraduationCap, Heart, Home, Leaf, Globe, Users } from "lucide-react"
+import { Card, CardContent } from "@/components/ui/card"
+
+const programItems = [
+  {
+    title: "Economie",
+    icon: <TrendingUp className="h-10 w-10 text-emerald-500" />,
+    standpoint: "Investeren in groene technologie en start-ups",
+    argument: "Dit zorgt voor nieuwe banen én helpt het klimaat",
+  },
+  {
+    title: "Defensie",
+    icon: <Shield className="h-10 w-10 text-blue-500" />,
+    standpoint: "Moderniseren van het leger met cyberbeveiliging en drones",
+    argument: "De dreiging van cyberaanvallen groeit en vereist een moderne aanpak",
+  },
+  {
+    title: "Onderwijs",
+    icon: <GraduationCap className="h-10 w-10 text-purple-500" />,
+    standpoint: "Meer aandacht voor digitale vaardigheden op school",
+    argument: "In de toekomst zijn technologische vaardigheden cruciaal",
+  },
+  {
+    title: "Gezondheidszorg",
+    icon: <Heart className="h-10 w-10 text-red-500" />,
+    standpoint: "Meer investeren in mentale gezondheidszorg",
+    argument: "Mentale gezondheid is even belangrijk als fysieke gezondheid",
+  },
+  {
+    title: "Huisvesting",
+    icon: <Home className="h-10 w-10 text-orange-500" />,
+    standpoint: "Versnellen van duurzame woningbouw",
+    argument: "Iedereen verdient een betaalbaar en duurzaam dak boven het hoofd",
+  },
+  {
+    title: "Klimaat",
+    icon: <Leaf className="h-10 w-10 text-green-500" />,
+    standpoint: "Versnellen van de energietransitie",
+    argument: "Klimaatverandering vereist ambitieuze en concrete maatregelen",
+  },
+  {
+    title: "Buitenlandbeleid",
+    icon: <Globe className="h-10 w-10 text-indigo-500" />,
+    standpoint: "Versterken van internationale samenwerking",
+    argument: "Globale uitdagingen vereisen gezamenlijke oplossingen",
+  },
+  {
+    title: "Sociale Zaken",
+    icon: <Users className="h-10 w-10 text-yellow-500" />,
+    standpoint: "Hervormen van het sociale zekerheidsstelsel",
+    argument: "Een vangnet dat mensen ondersteunt én activeert",
+  },
+]
+
+export default function Program() {
   return (
-    <div className="container py-12 md:py-16 lg:py-24">
-      <div className="mx-auto max-w-4xl space-y-12">
-        <div className="space-y-4 text-center">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl">Samen bouwen aan morgen</h1>
-          <p className="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
-            Ons verkiezingsprogramma voor een duurzaam, rechtvaardig en vooruitstrevend Nederland.
-          </p>
+    <div className="flex flex-col">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-emerald-500 py-20 text-white">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl text-center">
+            <h1 className="mb-6 text-4xl font-bold md:text-5xl">Ons Programma</h1>
+            <p className="text-xl">Samen bouwen aan morgen</p>
+          </div>
         </div>
+      </section>
 
-        <Tabs defaultValue="economie" className="w-full">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4">
-            <TabsTrigger value="economie">Economie</TabsTrigger>
-            <TabsTrigger value="defensie">Defensie</TabsTrigger>
-            <TabsTrigger value="onderwijs">Onderwijs</TabsTrigger>
-            <TabsTrigger value="zorg">Gezondheidszorg</TabsTrigger>
-          </TabsList>
+      {/* Program Content */}
+      <section className="py-20">
+        <div className="container px-4">
+          <div className="mx-auto max-w-4xl">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 text-3xl font-bold text-gray-900">Verkiezingsprogramma</h2>
+              <p className="mx-auto max-w-2xl text-lg text-gray-700">
+                Ons programma is gebaseerd op een duidelijke visie voor de toekomst van Nederland. Hieronder vindt u
+                onze belangrijkste standpunten.
+              </p>
+            </div>
 
-          <TabsContent value="economie" className="mt-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Economie</CardTitle>
-                <CardDescription>Een duurzame en inclusieve economie</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-bold">Standpunt: Duurzame groei</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Wij streven naar economische groei die hand in hand gaat met duurzaamheid. Investeringen in groene
-                    technologie, circulaire economie en duurzame energie zijn essentieel voor onze toekomst.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Eerlijke belastingen</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Grote bedrijven en de allerrijksten moeten een eerlijke bijdrage leveren. Tegelijkertijd willen we
-                    het MKB, de ruggengraat van onze economie, ondersteunen met lagere lasten en minder regeldruk.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Innovatie stimuleren</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Nederland moet vooroplopen in innovatie. We willen meer investeren in R&D, startups ondersteunen en
-                    een gunstig klimaat creëren voor bedrijven die bijdragen aan de oplossingen voor de uitdagingen van
-                    morgen.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="defensie" className="mt-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Defensie</CardTitle>
-                <CardDescription>Een sterke en moderne defensie</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-bold">Standpunt: Europese samenwerking</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Wij geloven in een sterke Europese defensiesamenwerking. Door krachten te bundelen kunnen we
-                    efficiënter werken en beter voorbereid zijn op de uitdagingen van de toekomst.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Moderne krijgsmacht</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Onze krijgsmacht moet modern en goed uitgerust zijn. We willen investeren in cyberveiligheid, nieuwe
-                    technologieën en het welzijn van ons defensiepersoneel.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: NAVO-verplichtingen</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Nederland moet voldoen aan zijn NAVO-verplichtingen en bijdragen aan internationale veiligheid.
-                    Tegelijkertijd pleiten we voor diplomatieke oplossingen en preventie van conflicten.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="onderwijs" className="mt-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Onderwijs</CardTitle>
-                <CardDescription>Gelijke kansen en toekomstgericht onderwijs</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-bold">Standpunt: Investeren in leraren</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Goed onderwijs begint bij goede leraren. We willen het lerarenberoep aantrekkelijker maken door
-                    betere salarissen, minder werkdruk en meer professionele autonomie.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Kleinere klassen</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Kleinere klassen leiden tot meer aandacht voor elke leerling. We willen investeren in meer
-                    onderwijspersoneel om de kwaliteit van het onderwijs te verbeteren.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Digitale vaardigheden</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    In een steeds digitalere wereld moeten alle leerlingen digitale vaardigheden ontwikkelen. We willen
-                    meer aandacht voor technologie, programmeren en mediawijsheid in het curriculum.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-
-          <TabsContent value="zorg" className="mt-6">
-            <Card>
-              <CardHeader>
-                <CardTitle>Gezondheidszorg</CardTitle>
-                <CardDescription>Toegankelijke en betaalbare zorg voor iedereen</CardDescription>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h3 className="font-bold">Standpunt: Lagere eigen bijdragen</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Zorg moet voor iedereen toegankelijk zijn. We willen het eigen risico verlagen en zorgen dat niemand
-                    zorg mijdt om financiële redenen.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Waardering zorgpersoneel</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Zorgmedewerkers verdienen meer waardering, zowel financieel als in arbeidsomstandigheden. We willen
-                    investeren in meer handen aan het bed en minder administratieve lasten.
-                  </p>
-                </div>
-                <div>
-                  <h3 className="font-bold">Standpunt: Preventie</h3>
-                  <p className="text-gray-500 dark:text-gray-400">
-                    Voorkomen is beter dan genezen. We willen meer investeren in preventie, gezonde leefstijl en vroege
-                    interventies om zorgkosten op lange termijn te beheersen.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </TabsContent>
-        </Tabs>
-      </div>
+            <div className="grid gap-6 md:grid-cols-2">
+              {programItems.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="h-full border-none shadow-lg transition-all duration-300 hover:shadow-xl">
+                    <CardContent className="flex h-full flex-col p-6">
+                      <div className="mb-4">{item.icon}</div>
+                      <h3 className="mb-2 text-2xl font-bold text-gray-900">{item.title}</h3>
+                      <div className="mb-4 h-0.5 w-16 bg-gradient-to-r from-blue-500 to-emerald-500"></div>
+                      <div className="mb-4">
+                        <p className="font-medium text-gray-900">{item.standpoint}</p>
+                      </div>
+                      <p className="mt-auto text-gray-600">{item.argument}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
