@@ -45,7 +45,7 @@ export default function Contact() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-emerald-500 py-20 text-white">
+      <section className="bg-gradient-to-r from-indigo-700 to-teal-700 py-20 text-white">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">Contact</h1>
@@ -74,7 +74,7 @@ export default function Contact() {
 
                 <div className="space-y-6">
                   <div className="flex items-start">
-                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700">
                       <Mail className="h-6 w-6" />
                     </div>
                     <div>
@@ -84,7 +84,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-600">
+                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700">
                       <Phone className="h-6 w-6" />
                     </div>
                     <div>
@@ -94,7 +94,7 @@ export default function Contact() {
                   </div>
 
                   <div className="flex items-start">
-                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-purple-100 text-purple-600">
+                    <div className="mr-4 flex h-12 w-12 items-center justify-center rounded-full bg-teal-100 text-teal-700">
                       <MapPin className="h-6 w-6" />
                     </div>
                     <div>
@@ -120,7 +120,7 @@ export default function Contact() {
                   <CardContent className="p-8">
                     {isSubmitted ? (
                       <div className="flex flex-col items-center justify-center py-8 text-center">
-                        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
+                        <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-teal-100 text-teal-700">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
                             className="h-8 w-8"
@@ -181,7 +181,7 @@ export default function Contact() {
                         </div>
                         <Button
                           type="submit"
-                          className="w-full bg-gradient-to-r from-blue-600 to-emerald-500 text-white"
+                          className="w-full bg-gray-100 text-indigo-800 hover:bg-gray-200"
                           disabled={isSubmitting}
                         >
                           {isSubmitting ? "Verzenden..." : "Neem contact op"}

@@ -8,7 +8,7 @@ export default function AboutUs() {
   return (
     <div className="flex flex-col">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-emerald-500 py-20 text-white">
+      <section className="bg-gradient-to-r from-indigo-700 to-teal-700 py-20 text-white">
         <div className="container px-4">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="mb-6 text-4xl font-bold md:text-5xl">Over Ons</h1>
@@ -30,7 +30,7 @@ export default function AboutUs() {
               >
                 <div className="relative h-80 w-full overflow-hidden rounded-2xl">
                   <Image
-                    src="/placeholder.svg?height=600&width=800"
+                    src="/Team.jpg"
                     alt="Toekomst Nederland Team"
                     fill
                     className="object-cover"
@@ -45,8 +45,7 @@ export default function AboutUs() {
               >
                 <h2 className="mb-4 text-3xl font-bold text-gray-900">Toekomst Nederland (TN)</h2>
                 <p className="mb-6 text-lg text-gray-700">
-                  Onze naam weerspiegelt onze focus: het bouwen aan een betere toekomst voor Nederland. We kijken
-                  vooruit, niet achteruit, en zoeken naar innovatieve oplossingen voor de uitdagingen van morgen.
+                  Onze naam laat zien waar we voor staan: een beter Nederland voor morgen. We denken aan de toekomst, niet aan het verleden, en zoeken slimme manieren om de problemen van nu en later op te lossen. Samen met burgers willen we Nederland eerlijk en groen maken.
                 </p>
               </motion.div>
             </div>
@@ -62,9 +61,7 @@ export default function AboutUs() {
                 <CardContent className="p-8">
                   <h2 className="mb-6 text-3xl font-bold text-gray-900">Onze Visie</h2>
                   <p className="text-lg leading-relaxed text-gray-700">
-                    Wij geloven in een toekomstgericht Nederland waarin duurzaamheid, gelijke kansen en technologische
-                    vooruitgang centraal staan. Onze ideologie is progressief en sociaal-liberaal: we combineren
-                    individuele vrijheid met verantwoordelijkheid voor elkaar en het milieu.
+                    Wij willen een Nederland dat klaar is voor de toekomst, met aandacht voor een schone natuur, gelijke kansen voor iedereen en slimme technologie. Onze ideeën zijn vooruitstrevend en eerlijk: we geven mensen vrijheid, maar zorgen ook goed voor elkaar en het milieu. We streven naar een land waar iedereen zich thuis voelt.
                   </p>
                 </CardContent>
               </Card>
@@ -80,28 +77,25 @@ export default function AboutUs() {
               <div className="grid gap-6 md:grid-cols-3">
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="mb-2 text-xl font-bold text-emerald-600">Innovatie</h3>
+                    <h3 className="mb-2 text-xl font-bold text-teal-700">Innovatie</h3>
                     <p className="text-gray-700">
-                      We omarmen technologische vooruitgang en zoeken naar creatieve oplossingen voor maatschappelijke
-                      uitdagingen.
+                      We houden van nieuwe technologie en zoeken slimme manieren om problemen in de samenleving op te lossen. Dit helpt ons om het leven van mensen makkelijker en beter te maken.
                     </p>
                   </CardContent>
                 </Card>
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="mb-2 text-xl font-bold text-blue-600">Duurzaamheid</h3>
+                    <h3 className="mb-2 text-xl font-bold text-teal-700">Duurzaamheid</h3>
                     <p className="text-gray-700">
-                      We streven naar een economie en samenleving die in balans is met de natuur en toekomstige
-                      generaties.
+                      We willen een economie en samenleving die goed is voor de natuur en zorgt voor de mensen die na ons komen. Dit betekent minder vervuiling en meer groene energie.
                     </p>
                   </CardContent>
                 </Card>
                 <Card className="border-none shadow-md">
                   <CardContent className="p-6">
-                    <h3 className="mb-2 text-xl font-bold text-purple-600">Gelijke Kansen</h3>
+                    <h3 className="mb-2 text-xl font-bold text-teal-700">Gelijke Kansen</h3>
                     <p className="text-gray-700">
-                      We geloven dat iedereen, ongeacht achtergrond, dezelfde mogelijkheden verdient om te slagen in het
-                      leven.
+                      We vinden dat iedereen, waar je ook vandaan komt, dezelfde kansen moet krijgen om succesvol te zijn. Onderwijs en werk moeten voor iedereen bereikbaar zijn.
                     </p>
                   </CardContent>
                 </Card>
